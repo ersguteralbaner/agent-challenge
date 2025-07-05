@@ -2,6 +2,19 @@
 
 ![Agent-101](./assets/NosanaBuildersChallengeAgents.jpg)
 
+## Submission Details
+
+Link to your Docker container
+docker.io/ersguteralbaner/email-assistant
+
+Link to your video demo
+
+https://vimeo.com/1098995566?share=copy
+
+Nosana deployment proof
+
+https://dashboard.nosana.com/jobs/6NzmpfKuzTPyoE977xnxoniQCUyNHk95dd7zHTqAcrZy
+
 ## Topic
 
 Nosana Builders Challenge, 2nd edition
