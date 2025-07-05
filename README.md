@@ -55,10 +55,11 @@ Create a `.env` file with the following variables:
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 GOOGLE_REFRESH_TOKEN=your-oauth-refresh-token
+GOOGLE_REDIRECT_URI=https://your-redirect-uri.com/auth/callback
 
-# LLM config (Ollama default)
-OPENAI_API_BASE=http://localhost:11434
-OPENAI_API_KEY=ollama-placeholder-key
+# LLM config
+API_BASE_URL=http://127.0.0.1:11434/api
+MODEL_NAME_AT_ENDPOINT=qwen2.5:1.5b
 
 
 ---
