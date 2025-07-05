@@ -1,18 +1,27 @@
+// index.ts
 import { Mastra } from "@mastra/core/mastra";
 import { PinoLogger } from "@mastra/loggers";
-import { weatherAgent } from "./agents/weather-agent/weather-agent"; // This can be deleted later
-import { weatherWorkflow } from "./agents/weather-agent/weather-workflow"; // This can be deleted later
-import { yourAgent } from "./agents/your-agent/your-agent"; // Build your agent here
+import { emailAssistantAgent } from "./agents/email-tools/email-assistant-agent";
+
+const logger = new PinoLogger({
+  name: "Mastra",
+  level: "debug", // Set to debug for detailed logging during development
+  serializers: {
+    error: (err) => ({
+      message: err.message,
+      stack: err.stack,
+      ...err
+    })
+  }
+});
 
 export const mastra = new Mastra({
-	workflows: { weatherWorkflow }, // can be deleted later
-	agents: { weatherAgent, yourAgent },
-	logger: new PinoLogger({
-		name: "Mastra",
-		level: "info",
-	}),
-	server: {
-		port: 8080,
-		timeout: 10000,
-	},
+  agents: { emailAssistantAgent },
+  logger,
+  server: {
+    port: 8080,
+    timeout: 100000,
+  },
 });
+
+logger.info("Mastra application initialized");
